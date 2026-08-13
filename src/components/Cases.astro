@@ -1,0 +1,114 @@
+---
+import { useTranslations, type Lang } from '../i18n/ui';
+import { TELEGRAM_URL, PROJECTS } from '../config';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const labels = [
+  t('cases.label.problem'),
+  t('cases.label.solution'),
+  t('cases.label.tech'),
+  t('cases.label.result'),
+];
+
+const cases = [
+  {
+    name: 'Kalkulos',
+    href: PROJECTS.kalkulos,
+    linkText: 'kalkulos.com',
+    dark: false,
+    fields: [t('cases.1.problem'), t('cases.1.solution'), t('cases.1.tech'), t('cases.1.result')],
+    quote: t('cases.1.quote'),
+    author: null,
+  },
+  {
+    name: 'Nexum Group',
+    href: PROJECTS.nexum,
+    linkText: 'nexumgroup.work',
+    dark: false,
+    fields: [t('cases.2.problem'), t('cases.2.solution'), t('cases.2.tech'), t('cases.2.result')],
+    quote: t('cases.2.quote'),
+    author: 'Enrique · Nexum Group',
+  },
+  {
+    name: 'Asistente IA',
+    href: TELEGRAM_URL,
+    linkText: t('cases.3.cta'),
+    dark: true,
+    fields: [t('cases.3.problem'), t('cases.3.solution'), t('cases.3.tech'), t('cases.3.result')],
+    quote: null,
+    author: null,
+  },
+];
+---
+
+<section id="projects" class="mx-auto max-w-6xl scroll-mt-20 px-5 pb-14 md:px-8 md:pb-20">
+  <p class="mb-4 text-[11px] tracking-[0.18em] text-electric uppercase">{t('cases.eyebrow')}</p>
+  <h2
+    class="font-display mb-2.5 max-w-[24ch] text-[clamp(1.9rem,4.5vw,2.5rem)] leading-[1.12] text-navy"
+  >
+    {t('cases.title')}
+  </h2>
+  <p class="mb-8 max-w-[52ch] text-[15px] leading-[1.65] text-navy/62">{t('cases.sub')}</p>
+
+  <div class="flex flex-col gap-4">
+    {
+      cases.map((c) => (
+        <article
+          class={`rounded-xl p-6 md:p-7 ${c.dark ? 'bg-navy' : 'border border-navy/12 bg-white'}`}
+        >
+          <div class="mb-5 flex flex-wrap items-baseline justify-between gap-3">
+            <div class="flex items-center gap-2.5">
+              <h3 class={`text-[19px] font-medium ${c.dark ? 'text-white' : 'text-navy'}`}>
+                {c.name}
+              </h3>
+              {c.dark && (
+                <span class="inline-block h-[7px] w-[7px] rounded-full bg-electric" aria-hidden="true" />
+              )}
+            </div>
+            <a
+              href={c.href}
+              target="_blank"
+              rel="noopener"
+              class="text-[13px] text-electric underline decoration-electric/30 underline-offset-2"
+            >
+              {c.linkText} →
+            </a>
+          </div>
+
+          <dl class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {c.fields.map((val, i) => (
+              <div>
+                <dt
+                  class={`mb-1 text-[10px] tracking-[0.1em] uppercase ${c.dark ? 'text-white/45' : 'text-navy/42'}`}
+                >
+                  {labels[i]}
+                </dt>
+                <dd
+                  class={`text-[14px] leading-[1.55] ${c.dark ? 'text-white/90' : 'text-navy'}`}
+                >
+                  {val}
+                </dd>
+              </div>
+            ))}
+          </dl>
+
+          {c.quote && (
+            <figure class="mt-5 border-t border-navy/10 pt-4">
+              <blockquote class="font-display text-[17px] leading-[1.55] text-navy italic">
+                “{c.quote}”
+              </blockquote>
+              {c.author && (
+                <figcaption class="mt-2 text-[12px] text-navy/50">{c.author}</figcaption>
+              )}
+            </figure>
+          )}
+        </article>
+      ))
+    }
+  </div>
+</section>

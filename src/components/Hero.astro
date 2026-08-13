@@ -1,0 +1,112 @@
+---
+import { useTranslations, type Lang } from '../i18n/ui';
+import { TELEGRAM_URL, PROJECTS } from '../config';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section class="mx-auto max-w-6xl px-5 pt-14 pb-10 md:px-8 md:pt-20">
+  <div class="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+    <div>
+      <p class="mb-5 text-[11px] tracking-[0.18em] text-electric uppercase">
+        {t('hero.eyebrow')}
+      </p>
+
+      <h1
+        class="font-display text-[clamp(2.4rem,7vw,3.7rem)] leading-[1.06] tracking-[-0.015em] text-navy"
+      >
+        {t('hero.title.a')}
+        <em class="text-electric not-italic italic">{t('hero.title.b')}</em>.
+      </h1>
+
+      <p class="mt-5 max-w-[46ch] text-[16px] leading-[1.65] text-navy/62 md:text-[17px]">
+        {t('hero.sub')}
+      </p>
+
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <a
+          href={TELEGRAM_URL}
+          target="_blank"
+          rel="noopener"
+          class="flex min-h-[48px] items-center gap-2 rounded-md bg-navy px-6 text-[15px] font-medium text-white transition-opacity hover:opacity-88"
+        >
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M21.9 4.3 19 19.2c-.2 1-.8 1.2-1.6.8l-4.4-3.2-2.1 2c-.2.3-.4.4-.9.4l.3-4.5 8.2-7.4c.4-.3-.1-.5-.6-.2L7.7 13.4l-4.3-1.3c-.9-.3-1-.9.2-1.4l16.8-6.5c.8-.3 1.5.2 1.5 1.1Z"
+            ></path>
+          </svg>
+          {t('hero.cta.primary')}
+        </a>
+
+        <a
+          href="#projects"
+          class="flex min-h-[48px] items-center rounded-md border border-navy/20 px-6 text-[15px] font-medium text-navy transition-colors hover:border-navy/45"
+          >{t('hero.cta.secondary')}</a
+        >
+      </div>
+    </div>
+
+    <div class="rounded-xl bg-navy p-5 md:p-6">
+      <div class="mb-4 flex items-center gap-2">
+        <span class="inline-block h-[7px] w-[7px] rounded-full bg-electric"></span>
+        <span class="text-[11px] tracking-[0.1em] text-white/50 uppercase"
+          >{t('hero.demo.label')}</span
+        >
+      </div>
+
+      <div class="flex flex-col gap-2.5">
+        <p
+          class="max-w-[80%] self-start rounded-xl rounded-bl-sm bg-white/10 px-3.5 py-2.5 text-[14px] leading-[1.55] text-white/92"
+        >
+          {t('hero.demo.msg1')}
+        </p>
+        <p
+          class="max-w-[80%] self-end rounded-xl rounded-br-sm bg-electric px-3.5 py-2.5 text-[14px] leading-[1.55] text-white"
+        >
+          {t('hero.demo.msg2')}
+        </p>
+      </div>
+
+      <a
+        href={TELEGRAM_URL}
+        target="_blank"
+        rel="noopener"
+        class="mt-5 flex min-h-[44px] items-center justify-center rounded-md border border-white/20 text-[14px] text-white/85 transition-colors hover:border-white/45"
+      >
+        {t('cases.3.cta')} →
+      </a>
+    </div>
+  </div>
+
+  <div class="mt-14 border-t border-navy/10 pt-5">
+    <p class="mb-2.5 text-[10px] tracking-[0.12em] text-navy/45 uppercase">
+      {t('hero.proof.label')}
+    </p>
+    <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[15px]">
+      <a
+        href={PROJECTS.kalkulos}
+        target="_blank"
+        rel="noopener"
+        class="text-navy transition-colors hover:text-electric">Kalkulos</a
+      >
+      <span class="text-navy/20" aria-hidden="true">/</span>
+      <a
+        href={PROJECTS.nexum}
+        target="_blank"
+        rel="noopener"
+        class="text-navy transition-colors hover:text-electric">Nexum Group</a
+      >
+      <span class="text-navy/20" aria-hidden="true">/</span>
+      <a
+        href={TELEGRAM_URL}
+        target="_blank"
+        rel="noopener"
+        class="text-navy transition-colors hover:text-electric">Asistente IA</a
+      >
+    </div>
+  </div>
+</section>

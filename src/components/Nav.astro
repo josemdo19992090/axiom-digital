@@ -1,0 +1,86 @@
+---
+import { useTranslations, type Lang } from '../i18n/ui';
+import { TELEGRAM_URL } from '../config';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const home = lang === 'es' ? '/' : '/en/';
+const alt = lang === 'es' ? '/en/' : '/';
+---
+
+<header
+  class="sticky top-0 z-40 border-b border-navy/10 bg-paper/95 backdrop-blur-sm"
+>
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-3.5 md:px-8">
+    <a href={home} class="flex items-center gap-2.5" aria-label="Axiom Digital">
+      <svg width="28" height="20" viewBox="0 0 48 34" aria-hidden="true">
+        <path
+          d="M23 2 C10 2 2 9 2 17 C2 25 10 32 23 32 L23 24 L11 24 L11 21 L23 21 L23 2 Z"
+          fill="#0A0F2C"></path>
+        <path
+          d="M26 2 C39 2 46 9 46 17 C46 25 39 32 26 32 L26 25 C34 25 38 21 38 17 C38 13 34 9 26 9 Z"
+          fill="#2D6BFF"></path>
+      </svg>
+      <span class="text-[15px] tracking-[0.06em] text-navy">AXIOM DIGITAL</span>
+    </a>
+
+    <nav class="hidden items-center gap-7 md:flex" aria-label="Main">
+      <a href="#services" class="text-[13px] text-navy/60 transition-colors hover:text-navy"
+        >{t('nav.services')}</a
+      >
+      <a href="#projects" class="text-[13px] text-navy/60 transition-colors hover:text-navy"
+        >{t('nav.projects')}</a
+      >
+      <a href="#process" class="text-[13px] text-navy/60 transition-colors hover:text-navy"
+        >{t('nav.process')}</a
+      >
+      <a href="#contact" class="text-[13px] text-navy/60 transition-colors hover:text-navy"
+        >{t('nav.contact')}</a
+      >
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <div
+        class="flex overflow-hidden rounded-md border border-navy/15 text-[12px]"
+        role="group"
+        aria-label={lang === 'es' ? 'Idioma' : 'Language'}
+      >
+        <a
+          href="/"
+          class={`px-2.5 py-1 transition-colors ${lang === 'es' ? 'bg-navy text-white' : 'text-navy/55 hover:text-navy'}`}
+          aria-current={lang === 'es' ? 'true' : undefined}>ES</a
+        >
+        <a
+          href="/en/"
+          class={`px-2.5 py-1 transition-colors ${lang === 'en' ? 'bg-navy text-white' : 'text-navy/55 hover:text-navy'}`}
+          aria-current={lang === 'en' ? 'true' : undefined}>EN</a
+        >
+      </div>
+
+      <a
+        href={TELEGRAM_URL}
+        target="_blank"
+        rel="noopener"
+        class="hidden rounded-md bg-electric px-4 py-2 text-[13px] font-medium text-white transition-opacity hover:opacity-85 sm:block"
+        >{t('nav.cta')}</a
+      >
+    </div>
+  </div>
+</header>
+
+<div
+  class="fixed inset-x-0 bottom-0 z-40 border-t border-navy/10 bg-paper/95 p-3 backdrop-blur-sm sm:hidden"
+>
+  <a
+    href={TELEGRAM_URL}
+    target="_blank"
+    rel="noopener"
+    class="flex min-h-[48px] items-center justify-center gap-2 rounded-md bg-electric px-4 text-[15px] font-medium text-white"
+  >
+    {t('hero.cta.primary')}
+  </a>
+</div>

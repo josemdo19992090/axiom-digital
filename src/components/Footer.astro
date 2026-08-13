@@ -1,0 +1,99 @@
+---
+import { useTranslations, type Lang } from '../i18n/ui';
+import { TELEGRAM_URL, CONTACT_EMAIL, LINKEDIN_URL, PROJECTS } from '../config';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-navy/10">
+  <div class="mx-auto max-w-6xl px-5 pt-10 pb-24 sm:pb-10 md:px-8">
+    <div class="flex flex-wrap justify-between gap-10">
+      <div>
+        <div class="mb-2.5 flex items-center gap-2.5">
+          <svg width="24" height="17" viewBox="0 0 48 34" aria-hidden="true">
+            <path
+              d="M23 2 C10 2 2 9 2 17 C2 25 10 32 23 32 L23 24 L11 24 L11 21 L23 21 L23 2 Z"
+              fill="#0A0F2C"></path>
+            <path
+              d="M26 2 C39 2 46 9 46 17 C46 25 39 32 26 32 L26 25 C34 25 38 21 38 17 C38 13 34 9 26 9 Z"
+              fill="#2D6BFF"></path>
+          </svg>
+          <span class="text-[13px] tracking-[0.06em] text-navy">AXIOM DIGITAL</span>
+        </div>
+        <p class="max-w-[32ch] text-[13px] leading-[1.6] text-navy/50">{t('footer.tagline')}</p>
+      </div>
+
+      <div class="flex flex-wrap gap-x-12 gap-y-8">
+        <div>
+          <p class="mb-2.5 text-[10px] tracking-[0.12em] text-navy/42 uppercase">
+            {t('footer.services')}
+          </p>
+          <ul class="space-y-1.5 text-[13px] text-navy/65">
+            <li><a href="#services" class="hover:text-electric">{t('services.1.name')}</a></li>
+            <li><a href="#services" class="hover:text-electric">{t('services.2.name')}</a></li>
+            <li><a href="#services" class="hover:text-electric">{t('services.3.name')}</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="mb-2.5 text-[10px] tracking-[0.12em] text-navy/42 uppercase">
+            {t('footer.projects')}
+          </p>
+          <ul class="space-y-1.5 text-[13px] text-navy/65">
+            <li>
+              <a href={PROJECTS.kalkulos} target="_blank" rel="noopener" class="hover:text-electric"
+                >Kalkulos</a
+              >
+            </li>
+            <li>
+              <a href={PROJECTS.nexum} target="_blank" rel="noopener" class="hover:text-electric"
+                >Nexum Group</a
+              >
+            </li>
+            <li>
+              <a href={TELEGRAM_URL} target="_blank" rel="noopener" class="hover:text-electric"
+                >Asistente IA</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="mb-2.5 text-[10px] tracking-[0.12em] text-navy/42 uppercase">
+            {t('footer.contact')}
+          </p>
+          <ul class="space-y-1.5 text-[13px] text-navy/65">
+            <li>
+              <a href={TELEGRAM_URL} target="_blank" rel="noopener" class="hover:text-electric"
+                >Telegram</a
+              >
+            </li>
+            <li><a href={`mailto:${CONTACT_EMAIL}`} class="hover:text-electric">{CONTACT_EMAIL}</a></li>
+            <li>
+              <a href={LINKEDIN_URL} target="_blank" rel="noopener" class="hover:text-electric"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="mt-9 flex flex-wrap items-center justify-between gap-4 border-t border-navy/10 pt-4"
+    >
+      <p class="text-[11px] text-navy/45">
+        © {year} Axiom Digital · axiomadigital.tech · {t('footer.rights')}
+      </p>
+      <p class="text-[11px] text-navy/45">
+        <a href="/" class="hover:text-electric">Español</a> /
+        <a href="/en/" class="hover:text-electric">English</a>
+      </p>
+    </div>
+  </div>
+</footer>

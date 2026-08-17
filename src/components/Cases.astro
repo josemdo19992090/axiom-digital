@@ -47,7 +47,7 @@ const cases = [
 ---
 
 <section id="projects" class="mx-auto max-w-6xl scroll-mt-20 px-5 pb-14 md:px-8 md:pb-20">
-  <p class="mb-4 text-[11px] font-semibold tracking-[0.2em] text-electric uppercase">{t('cases.eyebrow')}</p>
+  <p class="mb-4 text-[13px] font-semibold tracking-[0.15em] text-electric uppercase">{t('cases.eyebrow')}</p>
   <h2
     class="font-display mb-2.5 max-w-[24ch] text-[clamp(1.9rem,4.5vw,2.6rem)] font-extrabold leading-[1.02] tracking-[-0.03em] text-navy"
   >
@@ -84,7 +84,7 @@ const cases = [
             {c.fields.map((val, i) => (
               <div>
                 <dt
-                  class={`mb-1 text-[10px] tracking-[0.1em] uppercase ${c.dark ? 'text-white/45' : 'text-navy/42'}`}
+                  class={`mb-1.5 text-[12px] font-medium tracking-[0.08em] uppercase ${c.dark ? 'text-white/45' : 'text-navy/42'}`}
                 >
                   {labels[i]}
                 </dt>
@@ -97,16 +97,7 @@ const cases = [
             ))}
           </dl>
 
-          {c.quote && (
-            <figure class="mt-5 border-t border-navy/10 pt-4">
-              <blockquote class="text-[16px] leading-[1.6] font-medium text-navy">
-                “{c.quote}”
-              </blockquote>
-              {c.author && (
-                <figcaption class="mt-2 text-[12px] text-navy/50">{c.author}</figcaption>
-              )}
-            </figure>
-          )}
+
         </article>
       ))
     }

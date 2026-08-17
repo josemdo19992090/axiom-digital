@@ -1,0 +1,54 @@
+---
+import { useTranslations, type Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const testimonials = [
+  {
+    quote: t('cases.1.quote'),
+    author: lang === 'es' ? 'Cliente Kalkulos' : 'Kalkulos client',
+    initials: 'K',
+  },
+  {
+    quote: t('cases.2.quote'),
+    author: 'Enrique · Nexum Group',
+    initials: 'E',
+  },
+];
+---
+
+<section class="bg-navy">
+  <div class="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-20">
+    <p class="mb-4 text-[13px] font-semibold tracking-[0.15em] text-electric uppercase">
+      {t('testimonials.eyebrow')}
+    </p>
+    <h2
+      class="font-display mb-10 max-w-[22ch] text-[clamp(1.9rem,4.5vw,2.6rem)] font-extrabold leading-[1.02] tracking-[-0.03em] text-white"
+    >
+      {t('testimonials.title')}
+    </h2>
+
+    <div class="grid gap-6 md:grid-cols-2">
+      {
+        testimonials.map((item) => (
+          <div class="rounded-xl border border-white/12 bg-white/5 p-7">
+            <span class="font-display mb-3 block text-[46px] leading-none text-electric" aria-hidden="true">
+              “
+            </span>
+            <p class="mb-6 text-[16px] leading-[1.65] text-white/90">{item.quote}</p>
+            <div class="flex items-center gap-3">
+              <span class="flex h-9 w-9 items-center justify-center rounded-full bg-electric text-[13px] font-semibold text-white">
+                {item.initials}
+              </span>
+              <span class="text-[13px] text-white/60">{item.author}</span>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

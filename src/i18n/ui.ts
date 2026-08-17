@@ -83,6 +83,8 @@ export const ui = {
     'cases.3.result': 'En producción, atendiendo sin interrupciones.',
     'cases.3.cta': 'Pruébalo ahora',
 
+    'testimonials.eyebrow': 'Lo que dicen',
+    'testimonials.title': 'No lo decimos nosotros, lo dicen ellos.',
     'process.eyebrow': 'Cómo trabajamos',
     'process.title': 'Cuatro pasos, sin sorpresas.',
     'process.1.name': 'Diagnóstico',
@@ -202,6 +204,8 @@ export const ui = {
     'cases.3.result': 'Live and answering without interruption.',
     'cases.3.cta': 'Try it now',
 
+    'testimonials.eyebrow': 'What they say',
+    'testimonials.title': "Don't take our word for it.",
     'process.eyebrow': 'How we work',
     'process.title': 'Four steps, no surprises.',
     'process.1.name': 'Diagnosis',

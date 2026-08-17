@@ -9,6 +9,16 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 ---
 
+<div class="relative h-[280px] w-full overflow-hidden md:h-[380px]">
+  <img
+    src="/images/hero-top.jpg"
+    alt=""
+    loading="eager"
+    class="h-full w-full object-cover"
+  />
+  <div class="absolute inset-0 bg-gradient-to-b from-navy/55 via-navy/20 to-paper"></div>
+</div>
+
 <section class="mx-auto max-w-6xl px-5 pt-14 pb-10 md:px-8 md:pt-20">
   <div class="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
     <div>

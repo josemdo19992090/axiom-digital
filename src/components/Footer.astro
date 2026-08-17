@@ -23,7 +23,7 @@ const year = new Date().getFullYear();
               d="M26 2 C39 2 46 9 46 17 C46 25 39 32 26 32 L26 25 C34 25 38 21 38 17 C38 13 34 9 26 9 Z"
               fill="#2D6BFF"></path>
           </svg>
-          <span class="text-[13px] tracking-[0.06em] text-navy">AXIOM DIGITAL</span>
+          <span class="text-[13px] tracking-[0.06em] text-navy">{lang === 'es' ? 'AXIOMA DIGITAL' : 'AXIOM DIGITAL'}</span>
         </div>
         <p class="max-w-[32ch] text-[13px] leading-[1.6] text-navy/50">{t('footer.tagline')}</p>
       </div>
@@ -88,7 +88,7 @@ const year = new Date().getFullYear();
       class="mt-9 flex flex-wrap items-center justify-between gap-4 border-t border-navy/10 pt-4"
     >
       <p class="text-[11px] text-navy/45">
-        © {year} Axiom Digital · axiomadigital.tech · {t('footer.rights')}
+        © {year} {lang === 'es' ? 'Axioma Digital' : 'Axiom Digital'} · axiomadigital.tech · {t('footer.rights')}
       </p>
       <p class="text-[11px] text-navy/45">
         <a href="/" class="hover:text-electric">Español</a> /

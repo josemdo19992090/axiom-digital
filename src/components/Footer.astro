@@ -1,6 +1,6 @@
 ---
 import { useTranslations, type Lang } from '../i18n/ui';
-import { TELEGRAM_URL, CONTACT_EMAIL, LINKEDIN_URL, PROJECTS } from '../config';
+import { TELEGRAM_URL, CONTACT_EMAIL, PROJECTS } from '../config';
 
 interface Props {
   lang: Lang;
@@ -68,11 +68,6 @@ const year = new Date().getFullYear();
               >
             </li>
             <li><a href={`mailto:${CONTACT_EMAIL}`} class="hover:text-electric">{CONTACT_EMAIL}</a></li>
-            <li>
-              <a href={LINKEDIN_URL} target="_blank" rel="noopener" class="hover:text-electric"
-                >LinkedIn</a
-              >
-            </li>
           </ul>
         </div>
       </div>

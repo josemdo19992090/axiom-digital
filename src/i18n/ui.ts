@@ -9,7 +9,7 @@ export type Lang = keyof typeof languages;
 
 export const ui = {
   es: {
-    'meta.title': 'Axiom Digital — Webs y herramientas de IA para negocios',
+    'meta.title': 'Axioma Digital — Webs y herramientas de IA para negocios',
     'meta.description':
       'Construimos webs y herramientas de IA para que tu empresa exista, funcione y opere efectivamente.',
 
@@ -130,7 +130,7 @@ export const ui = {
   },
 
   en: {
-    'meta.title': 'Axiom Digital — Websites and AI tools for businesses',
+    'meta.title': 'Axioma Digital — Websites and AI tools for businesses',
     'meta.description':
       'We build websites and AI tools so your business exists, runs, and operates effectively.',
 

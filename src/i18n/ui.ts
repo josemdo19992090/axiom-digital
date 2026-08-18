@@ -123,6 +123,7 @@ export const ui = {
     'contact.form.error': 'No se pudo enviar. Escríbenos por Telegram y lo resolvemos.',
 
     'footer.tagline': 'Webs y herramientas de IA para negocios que quieren operar efectivamente.',
+    'footer.location': 'Estudio digital remoto · Clientes en cualquier parte del mundo.',
     'footer.services': 'Servicios',
     'footer.projects': 'Proyectos',
     'footer.contact': 'Contacto',
@@ -244,6 +245,7 @@ export const ui = {
     'contact.form.error': "Couldn't send that. Message us on Telegram and we'll sort it out.",
 
     'footer.tagline': 'Websites and AI tools for businesses that want to operate effectively.',
+    'footer.location': 'Remote digital studio · Clients anywhere in the world.',
     'footer.services': 'Services',
     'footer.projects': 'Projects',
     'footer.contact': 'Contact',

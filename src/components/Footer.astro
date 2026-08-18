@@ -15,17 +15,11 @@ const year = new Date().getFullYear();
     <div class="flex flex-wrap justify-between gap-10">
       <div>
         <div class="mb-2.5 flex items-center gap-2.5">
-          <svg width="24" height="17" viewBox="0 0 48 34" aria-hidden="true">
-            <path
-              d="M23 2 C10 2 2 9 2 17 C2 25 10 32 23 32 L23 24 L11 24 L11 21 L23 21 L23 2 Z"
-              fill="#0A0F2C"></path>
-            <path
-              d="M26 2 C39 2 46 9 46 17 C46 25 39 32 26 32 L26 25 C34 25 38 21 38 17 C38 13 34 9 26 9 Z"
-              fill="#2D6BFF"></path>
-          </svg>
-          <span class="text-[13px] tracking-[0.06em] text-navy">{lang === 'es' ? 'AXIOMA DIGITAL' : 'AXIOM DIGITAL'}</span>
+          <img src="/images/logo-mark-light.png" alt="" width="24" height="16" class="h-4 w-auto" />
+          <span class="text-[13px] tracking-[0.06em] text-navy">AXIOMA DIGITAL</span>
         </div>
         <p class="max-w-[32ch] text-[13px] leading-[1.6] text-navy/50">{t('footer.tagline')}</p>
+        <p class="mt-1.5 max-w-[32ch] text-[13px] leading-[1.6] text-navy/50">{t('footer.location')}</p>
       </div>
 
       <div class="flex flex-wrap gap-x-12 gap-y-8">

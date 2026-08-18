@@ -48,7 +48,7 @@ const cases = [
   </h2>
   <p class="mb-8 max-w-[52ch] text-[15px] leading-[1.65] text-navy/62">{t('cases.sub')}</p>
 
-  <div class="-mx-5 flex items-start gap-4 overflow-x-auto px-5 pb-2 [scrollbar-width:thin] md:-mx-8 md:px-8">
+  <div class="-mx-5 flex items-stretch gap-4 overflow-x-auto px-5 pb-2 [scrollbar-width:thin] md:-mx-8 md:px-8">
     {
       cases.map((c) => (
         <a
@@ -60,18 +60,17 @@ const cases = [
           <div class="flex h-8 items-center gap-3.5">
             {c.logo && <img src={c.logo} alt={c.name} class="h-8 w-auto max-w-[160px] object-contain object-left" />}
             {c.showName && <span class="text-[16px] font-medium text-navy">{c.name}</span>}
+            {c.live && (
+              <span class="inline-flex w-fit items-center gap-1.5 rounded-full bg-electric/10 px-2 py-0.5 text-[10px] font-medium tracking-[0.03em] text-electric uppercase">
+                <span class="inline-block h-[5px] w-[5px] rounded-full bg-electric" aria-hidden="true" />
+                En vivo
+              </span>
+            )}
           </div>
-
-          {c.live && (
-            <span class="inline-flex w-fit items-center gap-1.5 rounded-full bg-electric/10 px-2.5 py-0.5 text-[11px] font-medium tracking-[0.03em] text-electric uppercase">
-              <span class="inline-block h-[6px] w-[6px] rounded-full bg-electric" aria-hidden="true" />
-              En vivo
-            </span>
-          )}
 
           <p class="text-[14px] leading-[1.55] text-navy/70">{c.desc}</p>
 
-          <span class="text-[13px] text-electric">{c.linkText} →</span>
+          <span class="mt-auto text-[13px] text-electric">{c.linkText} →</span>
         </a>
       ))
     }

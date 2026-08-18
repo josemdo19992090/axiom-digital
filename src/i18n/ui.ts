@@ -58,29 +58,16 @@ export const ui = {
     'cases.eyebrow': 'Proyectos',
     'cases.title': 'Todo lo que ves aquí está en producción.',
     'cases.sub': 'Puedes abrirlo y probarlo ahora mismo. No hay maquetas ni capturas.',
-    'cases.label.problem': 'Problema',
-    'cases.label.solution': 'Solución',
-    'cases.label.tech': 'Tecnología',
-    'cases.label.result': 'Resultado',
 
-    'cases.1.problem': 'Emprendedores sin claridad sobre sus márgenes y punto de equilibrio.',
     'cases.1.solution': 'Suite de calculadoras financieras online.',
-    'cases.1.tech': 'PWA multi-moneda, ES/EN, generación de PDF.',
-    'cases.1.result': '10 herramientas en producción, planes gratis y Pro.',
     'cases.1.quote':
       'Muy cómodo para resolver tareas desde el teléfono — ideal para la dinámica de mi negocio.',
 
-    'cases.2.problem': 'Una empresa de comercio internacional sin presencia web.',
     'cases.2.solution': 'Web corporativa multiidioma con identidad propia.',
-    'cases.2.tech': 'Multiidioma ES/EN/RU, paleta de marca, CDN global.',
-    'cases.2.result': 'Sitio operativo y en uso comercial.',
     'cases.2.quote':
       'Con esto damos un paso más hacia una empresa profesional, al día y actualizada. Muy satisfecho.',
 
-    'cases.3.problem': 'Negocios que pierden leads fuera del horario de atención.',
     'cases.3.solution': 'Bot que responde, cualifica y avisa en tiempo real.',
-    'cases.3.tech': 'Telegram, IA generativa, desplegado 24/7.',
-    'cases.3.result': 'En producción, atendiendo sin interrupciones.',
     'cases.3.cta': 'Pruébalo ahora',
 
     'testimonials.eyebrow': 'Lo que dicen',
@@ -180,29 +167,16 @@ export const ui = {
     'cases.eyebrow': 'Projects',
     'cases.title': 'Everything here is live.',
     'cases.sub': 'Open it and try it right now. No mockups, no screenshots.',
-    'cases.label.problem': 'Problem',
-    'cases.label.solution': 'Solution',
-    'cases.label.tech': 'Technology',
-    'cases.label.result': 'Result',
 
-    'cases.1.problem': 'Founders with no clear view of their margins or break-even point.',
     'cases.1.solution': 'A suite of online financial calculators.',
-    'cases.1.tech': 'Multi-currency PWA, ES/EN, PDF export.',
-    'cases.1.result': '10 tools live, with free and Pro plans.',
     'cases.1.quote':
       'Very convenient for sorting things out from my phone — ideal for how my business runs.',
 
-    'cases.2.problem': 'An international trading company with no web presence.',
     'cases.2.solution': 'A multilingual corporate site with its own identity.',
-    'cases.2.tech': 'ES/EN/RU, custom brand palette, global CDN.',
-    'cases.2.result': 'Live and in commercial use.',
     'cases.2.quote':
       "This takes us a step closer to being a professional company that's current and up to date. Very happy with it.",
 
-    'cases.3.problem': 'Businesses losing leads outside working hours.',
     'cases.3.solution': 'A bot that replies, qualifies, and alerts in real time.',
-    'cases.3.tech': 'Telegram, generative AI, deployed 24/7.',
-    'cases.3.result': 'Live and answering without interruption.',
     'cases.3.cta': 'Try it now',
 
     'testimonials.eyebrow': 'What they say',

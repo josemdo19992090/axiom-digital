@@ -8,40 +8,33 @@ interface Props {
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 
-const labels = [
-  t('cases.label.problem'),
-  t('cases.label.solution'),
-  t('cases.label.tech'),
-  t('cases.label.result'),
-];
-
 const cases = [
   {
     name: 'Kalkulos',
     href: PROJECTS.kalkulos,
     linkText: 'kalkulos.com',
-    dark: false,
-    fields: [t('cases.1.problem'), t('cases.1.solution'), t('cases.1.tech'), t('cases.1.result')],
-    quote: t('cases.1.quote'),
-    author: null,
+    live: false,
+    logo: '/images/logo-kalkulos.png',
+    showName: false,
+    desc: t('cases.1.solution'),
   },
   {
     name: 'Nexum Group',
     href: PROJECTS.nexum,
     linkText: 'nexumgroup.work',
-    dark: false,
-    fields: [t('cases.2.problem'), t('cases.2.solution'), t('cases.2.tech'), t('cases.2.result')],
-    quote: t('cases.2.quote'),
-    author: 'Enrique · Nexum Group',
+    live: false,
+    logo: '/images/logo-nexum.png',
+    showName: true,
+    desc: t('cases.2.solution'),
   },
   {
     name: 'Asistente IA',
     href: TELEGRAM_URL,
     linkText: t('cases.3.cta'),
-    dark: true,
-    fields: [t('cases.3.problem'), t('cases.3.solution'), t('cases.3.tech'), t('cases.3.result')],
-    quote: null,
-    author: null,
+    live: true,
+    logo: null,
+    showName: true,
+    desc: t('cases.3.solution'),
   },
 ];
 ---
@@ -55,50 +48,31 @@ const cases = [
   </h2>
   <p class="mb-8 max-w-[52ch] text-[15px] leading-[1.65] text-navy/62">{t('cases.sub')}</p>
 
-  <div class="flex flex-col gap-4">
+  <div class="-mx-5 flex items-start gap-4 overflow-x-auto px-5 pb-2 [scrollbar-width:thin] md:-mx-8 md:px-8">
     {
       cases.map((c) => (
-        <article
-          class={`rounded-xl p-6 md:p-7 ${c.dark ? 'bg-navy' : 'border border-navy/12 bg-white'}`}
+        <a
+          href={c.href}
+          target="_blank"
+          rel="noopener"
+          class="flex w-[260px] shrink-0 flex-col gap-4 rounded-xl border border-navy/12 bg-white p-6 transition-colors hover:border-electric/40"
         >
-          <div class="mb-5 flex flex-wrap items-baseline justify-between gap-3">
-            <div class="flex items-center gap-2.5">
-              <h3 class={`text-[19px] font-medium ${c.dark ? 'text-white' : 'text-navy'}`}>
-                {c.name}
-              </h3>
-              {c.dark && (
-                <span class="inline-block h-[7px] w-[7px] rounded-full bg-electric" aria-hidden="true" />
-              )}
-            </div>
-            <a
-              href={c.href}
-              target="_blank"
-              rel="noopener"
-              class="text-[13px] text-electric underline decoration-electric/30 underline-offset-2"
-            >
-              {c.linkText} →
-            </a>
+          <div class="flex h-8 items-center gap-3.5">
+            {c.logo && <img src={c.logo} alt={c.name} class="h-8 w-auto max-w-[160px] object-contain object-left" />}
+            {c.showName && <span class="text-[16px] font-medium text-navy">{c.name}</span>}
           </div>
 
-          <dl class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {c.fields.map((val, i) => (
-              <div>
-                <dt
-                  class={`mb-1.5 text-[12px] font-medium tracking-[0.08em] uppercase ${c.dark ? 'text-white/45' : 'text-navy/42'}`}
-                >
-                  {labels[i]}
-                </dt>
-                <dd
-                  class={`text-[14px] leading-[1.55] ${c.dark ? 'text-white/90' : 'text-navy'}`}
-                >
-                  {val}
-                </dd>
-              </div>
-            ))}
-          </dl>
+          {c.live && (
+            <span class="inline-flex w-fit items-center gap-1.5 rounded-full bg-electric/10 px-2.5 py-0.5 text-[11px] font-medium tracking-[0.03em] text-electric uppercase">
+              <span class="inline-block h-[6px] w-[6px] rounded-full bg-electric" aria-hidden="true" />
+              En vivo
+            </span>
+          )}
 
+          <p class="text-[14px] leading-[1.55] text-navy/70">{c.desc}</p>
 
-        </article>
+          <span class="text-[13px] text-electric">{c.linkText} →</span>
+        </a>
       ))
     }
   </div>

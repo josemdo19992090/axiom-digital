@@ -1,6 +1,7 @@
 ---
 import { useTranslations, type Lang } from '../i18n/ui';
 import { TELEGRAM_URL, PROJECTS } from '../config';
+import TelegramIcon from './TelegramIcon.astro';
 
 interface Props {
   lang: Lang;
@@ -44,11 +45,7 @@ const t = useTranslations(lang);
           rel="noopener"
           class="flex min-h-[48px] items-center gap-2 rounded-md bg-navy px-6 text-[15px] font-medium text-white transition-opacity hover:opacity-88"
         >
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path
-              d="M21.9 4.3 19 19.2c-.2 1-.8 1.2-1.6.8l-4.4-3.2-2.1 2c-.2.3-.4.4-.9.4l.3-4.5 8.2-7.4c.4-.3-.1-.5-.6-.2L7.7 13.4l-4.3-1.3c-.9-.3-1-.9.2-1.4l16.8-6.5c.8-.3 1.5.2 1.5 1.1Z"
-            ></path>
-          </svg>
+          <TelegramIcon size={17} />
           {t('hero.cta.primary')}
         </a>
 

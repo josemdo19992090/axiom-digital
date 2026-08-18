@@ -11,7 +11,7 @@ export const ui = {
   es: {
     'meta.title': 'Axioma Digital — Webs y herramientas de IA para negocios',
     'meta.description':
-      'Construimos webs y herramientas de IA para que tu empresa exista, funcione y opere efectivamente.',
+      'Diseñamos webs y construimos herramientas de IA para negocios: presencia digital, asistentes inteligentes y soluciones a medida.',
 
     'nav.services': 'Servicios',
     'nav.projects': 'Proyectos',
@@ -19,11 +19,11 @@ export const ui = {
     'nav.contact': 'Contacto',
     'nav.cta': 'Hablemos',
 
-    'hero.eyebrow': 'Web · IA aplicada · Automatización',
-    'hero.title.a': 'Tu empresa, como',
-    'hero.title.b': 'debe ser',
+    'hero.eyebrow': 'Presencia digital · Asistentes de IA · Herramientas a medida',
+    'hero.title.a': 'Webs y herramientas de IA, hechas para',
+    'hero.title.b': 'operar',
     'hero.sub':
-      'Construimos webs y herramientas de IA para que exista, funcione y opere efectivamente — en un mundo donde no tenerlo ya es quedarse atrás.',
+      'Diseñamos tu presencia digital y construimos las herramientas que tu negocio necesita para funcionar solo — desde la web hasta el asistente que responde por ti.',
     'hero.cta.primary': 'Habla con nuestro asistente',
     'hero.cta.secondary': 'Ver proyectos',
     'hero.demo.label': 'Asistente en vivo · 24/7',
@@ -120,7 +120,7 @@ export const ui = {
   en: {
     'meta.title': 'Axioma Digital — Websites and AI tools for businesses',
     'meta.description':
-      'We build websites and AI tools so your business exists, runs, and operates effectively.',
+      'We design websites and build AI tools for businesses: digital presence, intelligent assistants, and custom solutions.',
 
     'nav.services': 'Services',
     'nav.projects': 'Projects',
@@ -128,11 +128,11 @@ export const ui = {
     'nav.contact': 'Contact',
     'nav.cta': "Let's talk",
 
-    'hero.eyebrow': 'Web · Applied AI · Automation',
-    'hero.title.a': 'Your business, as it',
-    'hero.title.b': 'should be',
+    'hero.eyebrow': 'Digital presence · AI assistants · Custom tools',
+    'hero.title.a': 'Websites and AI tools, built to',
+    'hero.title.b': 'run',
     'hero.sub':
-      'We build websites and AI tools so it exists, runs, and operates effectively — in a world where not having them means falling behind.',
+      'We design your digital presence and build the tools your business needs to run itself — from the website to the assistant that answers for you.',
     'hero.cta.primary': 'Talk to our assistant',
     'hero.cta.secondary': 'See our work',
     'hero.demo.label': 'Live assistant · 24/7',

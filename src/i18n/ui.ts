@@ -168,7 +168,7 @@ export const ui = {
     'services.3.tags': 'Calculators|Quoting engines|Internal apps',
     'services.4.name': 'Brand design',
     'services.4.desc':
-      "A serious business should look the part. We design your visual identity, catalogs, social media assets, and everything else you need — one consistent look, nothing thrown together.",
+      'A serious business should look the part. We design your visual identity, catalogs, social media assets, and everything else you need — one consistent look, nothing thrown together.',
     'services.4.tags': 'Visual identity|Catalogs & editorial|Marketing assets',
     'services.footnote': "Need something you don't see here? We love a challenge —",
     'services.footnote.link': 'tell us about it',

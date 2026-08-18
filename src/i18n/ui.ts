@@ -11,7 +11,7 @@ export const ui = {
   es: {
     'meta.title': 'Axioma Digital — Webs y herramientas de IA para negocios',
     'meta.description':
-      'Diseñamos webs y construimos herramientas de IA para negocios: presencia digital, asistentes inteligentes y soluciones a medida.',
+      'Diseñamos webs, herramientas de IA e identidad visual para negocios: presencia digital, asistentes inteligentes y diseño de marca.',
 
     'nav.services': 'Servicios',
     'nav.projects': 'Proyectos',
@@ -38,7 +38,7 @@ export const ui = {
     'pains.3': 'Hacemos tareas a mano que podrían hacerse solas.',
 
     'services.eyebrow': 'Qué hacemos',
-    'services.title': 'Tres formas de resolverlo.',
+    'services.title': 'Todo lo que tu negocio necesita para existir bien.',
     'services.1.name': 'Presencia digital',
     'services.1.desc':
       'Sin web o con una que da vergüenza, no existes para Google. Te construimos una presencia completa: web profesional, dominio y correo corporativo. Tu empresa, visible y seria desde el primer día.',
@@ -52,6 +52,10 @@ export const ui = {
     'services.3.desc':
       'Cada negocio tiene un proceso que hace a mano y podría hacer solo. Te construimos la herramienta exacta que necesitas — calculadora, cotizador, app interna.',
     'services.3.tags': 'Calculadoras|Cotizadores|Apps internas',
+    'services.4.name': 'Diseño de marca',
+    'services.4.desc':
+      'Una empresa seria también se ve seria. Diseñamos tu identidad visual, catálogos, piezas para redes y todo el material que necesitas — con una sola línea gráfica, sin quedar como algo improvisado.',
+    'services.4.tags': 'Identidad visual|Catálogos y editorial|Piezas publicitarias',
     'services.footnote': '¿Necesitas algo que no ves aquí? Nos encantan los retos —',
     'services.footnote.link': 'cuéntanos',
 
@@ -102,7 +106,8 @@ export const ui = {
     'contact.form.service.1': 'Presencia digital',
     'contact.form.service.2': 'Asistente inteligente',
     'contact.form.service.3': 'Herramienta a medida',
-    'contact.form.service.4': 'Otro',
+    'contact.form.service.4': 'Diseño de marca',
+    'contact.form.service.5': 'Otro',
     'contact.form.submit': 'Enviar',
     'contact.form.sending': 'Enviando…',
     'contact.form.privacy': 'Tus datos llegan directo a nuestro correo. No los compartimos con nadie.',
@@ -120,7 +125,7 @@ export const ui = {
   en: {
     'meta.title': 'Axioma Digital — Websites and AI tools for businesses',
     'meta.description':
-      'We design websites and build AI tools for businesses: digital presence, intelligent assistants, and custom solutions.',
+      'We design websites, AI tools, and visual identity for businesses: digital presence, intelligent assistants, and brand design.',
 
     'nav.services': 'Services',
     'nav.projects': 'Projects',
@@ -147,7 +152,7 @@ export const ui = {
     'pains.3': 'We do things by hand that could run on their own.',
 
     'services.eyebrow': 'What we do',
-    'services.title': 'Three ways to fix it.',
+    'services.title': 'Everything your business needs to show up right.',
     'services.1.name': 'Digital presence',
     'services.1.desc':
       "Without a website — or with one you'd rather hide — you don't exist to Google. We build the whole thing: a professional site, your domain, and corporate email. Your company, visible and credible from day one.",
@@ -161,6 +166,10 @@ export const ui = {
     'services.3.desc':
       'Every business has a process it does by hand that could run itself. We build the exact tool you need — calculator, quoting engine, internal app.',
     'services.3.tags': 'Calculators|Quoting engines|Internal apps',
+    'services.4.name': 'Brand design',
+    'services.4.desc':
+      "A serious business should look the part. We design your visual identity, catalogs, social media assets, and everything else you need — one consistent look, nothing thrown together.",
+    'services.4.tags': 'Visual identity|Catalogs & editorial|Marketing assets',
     'services.footnote': "Need something you don't see here? We love a challenge —",
     'services.footnote.link': 'tell us about it',
 
@@ -211,7 +220,8 @@ export const ui = {
     'contact.form.service.1': 'Digital presence',
     'contact.form.service.2': 'Intelligent assistant',
     'contact.form.service.3': 'Custom tool',
-    'contact.form.service.4': 'Something else',
+    'contact.form.service.4': 'Brand design',
+    'contact.form.service.5': 'Something else',
     'contact.form.submit': 'Send',
     'contact.form.sending': 'Sending…',
     'contact.form.privacy': 'Your details go straight to our inbox. We never share them.',
